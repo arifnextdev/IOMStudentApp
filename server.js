@@ -20,9 +20,9 @@ const router = express.Router()
 app.use(cors())
 app.use(express.json())
 
-// app.use('/',(req,res)=>{
-//     res.send('Server Is Running')
-// })
+app.use('/',(req,res)=>{
+    res.send('Server Is Running')
+})
 
 app.post('/api/v1/shedule',async (req,res)=>{
     const shedule = await Shedule.create({...req.body})
