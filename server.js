@@ -20,7 +20,7 @@ const router = express.Router()
 app.use(cors())
 app.use(express.json())
 
-app.use('/',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send('Server Is Running')
 })
 
